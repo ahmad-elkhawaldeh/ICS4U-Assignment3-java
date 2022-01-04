@@ -11,22 +11,36 @@ import java.util.Scanner;
 /**.
  * Pattern
  */
-public final class Pattern {
+public class Pattern {
+     /**
+     * Constant.
+     */
+    static final int One = 1;
+    /**
+     * Constant.
+     */
+    static final int Five = 5;
+    /**
+     * Constant.
+     */
+    static final int Fifteen = 15;
+    
     /**
     * Function finds the index of a number, using Binary Search recursively.
     * @param number
     * @return printPattern
     */
-    public static String printPattern(int number) {
-         if (number < 1) {
+    public static final String printPattern(final int number) {
+         if (number < One) {
              return "";
          } else {
-            if (number >= 5) {
-                return printPattern(number - 1) + " "
-                    + number +printPattern(number - 1) + "\n" + " ";
-            } else
-               return printPattern(number - 1) + " "
-                    + number + printPattern(number - 1);
+            if (number >= Five) {
+                return printPattern(number - One) + " "
+                    + number + printPattern(number - 1) + "\n" + " ";
+            } else {
+               return printPattern(number - One) + " "
+                    + number + printPattern(number - One);
+            }
          }
     }
     
@@ -35,11 +49,11 @@ public final class Pattern {
     *
     * @param args No args will be used
     */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         final Scanner sc =  new Scanner(System.in);
         System.out.println("Enter a number between 1 to 15");
         final int number  = sc.nextInt();
-        if (number < 1 || number > 15) {
+        if (number < One || number > Fifteen) {
             System.out.println("Error: Worng input");
         } else {
             System.out.println("User input | Program output");
