@@ -38,7 +38,7 @@ public final class Pattern {
     public static void main(String[] args) {
         final Scanner sc =  new Scanner(System.in);
         System.out.println("Enter a number between 1 to 15");
-        int final number  = sc.nextInt();
+        final int number  = sc.nextInt();
         if (number < 1 || number > 15) {
             System.out.println("Error: Worng input");
         } else {
