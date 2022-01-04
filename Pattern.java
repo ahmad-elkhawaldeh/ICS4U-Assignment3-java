@@ -15,35 +15,46 @@ public class Pattern {
      /**
      * Constant.
      */
-    static final int One = 1;
+    static final int ONE = 1;
     /**
      * Constant.
      */
-    static final int Five = 5;
+    static final int FIVE = 5;
     /**
      * Constant.
      */
-    static final int Fifteen = 15;
-    
+    static final int FIFTEEN = 15;
+
+    /**
+    * Prevent instantiation
+    * Throw an exception IllegalStateException.
+    * if this ever is called
+    *
+    * @throws IllegalStateException
+    *
+    */
+    private Pattern() {
+        throw new IllegalStateException("Cannot be instantiated");
+    }
+
     /**
     * Function finds the index of a number, using Binary Search recursively.
     * @param number
     * @return printPattern
-    */
+    */ 
     public static final String printPattern(final int number) {
-         if (number < One) {
+         if (number < ONE) {
              return "";
          } else {
-            if (number >= Five) {
-                return printPattern(number - One) + " "
-                    + number + printPattern(number - 1) + "\n" + " ";
+            if (number >= FIVE) {
+                return printPattern(number - ONE) + " "
+                    + number + printPattern(number - ONE) + "\n" + " ";
             } else {
-               return printPattern(number - One) + " "
-                    + number + printPattern(number - One);
+               return printPattern(number - ONE) + " "
+                    + number + printPattern(number - ONE);
             }
          }
     }
-    
     /**
     * The starting main() function.
     *
@@ -53,12 +64,11 @@ public class Pattern {
         final Scanner sc =  new Scanner(System.in);
         System.out.println("Enter a number between 1 to 15");
         final int number  = sc.nextInt();
-        if (number < One || number > Fifteen) {
+        if (number < ONE || number > FIFTEEN) {
             System.out.println("Error: Worng input");
         } else {
             System.out.println("User input | Program output");
-            System.out.println( number + "  | " + printPattern(number));
-            
+            System.out.println(number + "  | " + printPattern(number));            
             System.out.println("\n");
         }
     }
