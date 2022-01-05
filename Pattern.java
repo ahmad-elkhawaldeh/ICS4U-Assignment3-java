@@ -11,7 +11,7 @@ import java.util.Scanner;
 /**.
  * Pattern
  */
-final class Pattern {
+puplic final class Pattern {
      /**
      * Constant.
      */
@@ -68,7 +68,7 @@ final class Pattern {
             System.out.println("Error: Worng input");
         } else {
             System.out.println("User input | Program output");
-            System.out.println(number + "  | " 
+            System.out.println(number + "  | "
                                + printPattern(number));
             System.out.println("\n");
         }
