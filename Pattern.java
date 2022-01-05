@@ -9,20 +9,20 @@
 import java.util.Scanner;
 
 /**.
- * Pattern
- */
-puplic final class Pattern {
-     /**
-     * Constant.
-     */
+* Pattern
+*/
+final class Pattern {
+    /**
+    * Constant.
+    */
     static final int ONE = 1;
     /**
-     * Constant.
-     */
+    * Constant.
+    */
     static final int FIVE = 5;
     /**
-     * Constant.
-     */
+    * Constant.
+    */
     static final int FIFTEEN = 15;
 
     /**
