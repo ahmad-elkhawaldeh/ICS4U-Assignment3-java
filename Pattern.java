@@ -11,7 +11,7 @@ import java.util.Scanner;
 /**.
 * Pattern
 */
-final class Pattern {
+public final class Pattern {
     /**
     * Constant.
     */
