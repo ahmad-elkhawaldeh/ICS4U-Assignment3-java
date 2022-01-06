@@ -42,7 +42,7 @@ public final class Pattern {
     * @param number
     * @return printPattern
     */
-    public static final String printPattern(final int number) {
+    public static String printPattern(final int number) {
          if (number < ONE) {
              return "";
          } else {
